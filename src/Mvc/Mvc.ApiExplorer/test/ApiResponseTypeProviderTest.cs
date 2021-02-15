@@ -709,6 +709,38 @@ namespace Microsoft.AspNetCore.Mvc.ApiExplorer
                 });
         }
 
+        [Fact]
+        public void GetApiResponseTypes_HandleVoidResponseType()
+        {
+            // Arrange
+            var actionDescriptor = GetControllerActionDescriptor(
+                typeof(GetApiResponseTypes_HandleVoidResponseTypeController),
+                nameof(GetApiResponseTypes_HandleVoidResponseTypeController.Get));
+
+            var provider = GetProvider();
+
+            // Act
+            var result = provider.GetApiResponseTypes(actionDescriptor);
+
+            // Assert
+            Assert.Collection(
+                result.OrderBy(r => r.StatusCode),
+                responseType =>
+                {
+                    Assert.Equal(401, responseType.StatusCode);
+                    Assert.Equal(typeof(void), responseType.Type);
+                    Assert.False(responseType.IsDefaultResponse);
+                });
+        }
+
+        [ApiConventionType(typeof(DefaultApiConventions))]
+        public class GetApiResponseTypes_HandleVoidResponseTypeController : ControllerBase
+        {
+            [HttpGet]
+            [ProducesResponseType(401)]
+            public IActionResult Get() => Ok();
+        }
+
         private static ApiResponseTypeProvider GetProvider()
         {
             var mvcOptions = new MvcOptions
