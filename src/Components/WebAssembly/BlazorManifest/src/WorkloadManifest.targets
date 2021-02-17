@@ -1,0 +1,7 @@
+<Project>
+    <ImportGroup Condition="'$(UsingMicrosoftNETSdkBlazorWebAssembly)'=='true' AND '$(RunAOTCompilation)' == 'true'">
+        <Import Project="Sdk.props" Sdk="Microsoft.NET.Runtime.MonoAOTCompiler.Task" />
+        <Import Project="Sdk.targets" Sdk="Microsoft.NET.Runtime.WebAssembly.Sdk" />
+        <Import Project="Sdk.props" Sdk="Microsoft.Netcore.App.Runtime.Aot.Cross.browser-wasm" />
+    </ImportGroup>
+</Project>

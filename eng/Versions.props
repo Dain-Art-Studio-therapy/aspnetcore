@@ -67,6 +67,9 @@
     <MicrosoftExtensionsDependencyModelVersion>6.0.0-preview.2.21116.2</MicrosoftExtensionsDependencyModelVersion>
     <MicrosoftNETCoreAppRefVersion>6.0.0-preview.2.21116.2</MicrosoftNETCoreAppRefVersion>
     <MicrosoftNETCoreAppRuntimewinx64Version>6.0.0-preview.2.21116.2</MicrosoftNETCoreAppRuntimewinx64Version>
+    <MicrosoftNETRuntimeMonoAOTCompilerTaskVersion>6.0.0-preview.2.21116.2</MicrosoftNETRuntimeMonoAOTCompilerTaskVersion>
+    <MicrosoftNETRuntimeWebAssemblySdkVersion>6.0.0-preview.2.21116.2</MicrosoftNETRuntimeWebAssemblySdkVersion>
+    <MicrosoftNETCoreAppRuntimeAOTWin64CrossBrowserWasmVersion>6.0.0-preview.2.21116.2</MicrosoftNETCoreAppRuntimeAOTWin64CrossBrowserWasmVersion>
     <MicrosoftNETCoreBrowserDebugHostTransportVersion>6.0.0-preview.2.21116.2</MicrosoftNETCoreBrowserDebugHostTransportVersion>
     <MicrosoftWin32RegistryVersion>6.0.0-preview.2.21116.2</MicrosoftWin32RegistryVersion>
     <MicrosoftWin32SystemEventsVersion>6.0.0-preview.2.21116.2</MicrosoftWin32SystemEventsVersion>
